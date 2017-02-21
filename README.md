@@ -9,26 +9,27 @@ You can find an interactive demo (actually productive) version of the chart here
 
 ### Requirements
 
-* Python 2.6
+* Python 3.6
 * [`speedtest-cli`](https://github.com/sivel/speedtest-cli)
 * Google account
 
 ### Installation and usage
 
+**NOTE**
+I edited this to fit a friends request
+
 1. Clone and open repository:  
-  `git clone https://github.com/frdmn/google-speedtest-chart.git && cd google-speedtest-chart`
+  `git clone https://github.com/Beachman4/google-speedtest-chart && cd google-speedtest-chart`
 1. Install dependencies:  
-  `pip install gdata speedtest-cli google-api-python-client`
+  `pip install speedtest-cli cymysql sqlalchemy`
+1. Insert the SQL in the file table.sql
+
+1. Symlink it into your $PATH:
+   `ln -s speedtest.py /usr/local/bin/speedtest`
 1. Copy default config and adjust it:  
   `cp default.config.json config.json`
-1. Symlink it into your `$PATH`:  
-  `ln -s speedtest.py /usr/local/bin/speedtest-to-google`
-1. Create an OAuth token using the tutorial in the wiki:  
-  :book: [docs/How-to-create-a-Google-OAuth-token.md](docs/How-to-create-a-Google-OAuth-token.md)
-1. Create a spreadsheet dedicated to collect your speedtest results:  
-  :book: [docs/Create-a-spreadsheet-to-collect-data.md](docs/Create-a-spreadsheet-to-collect-data.md) and make sure to adjust `spreadsheet_id` in the `config.json` file
 1. Run the script:  
-  `$ speedtest-to-google`
+  `$ speedtest`
 
 ### License
 
